@@ -1,37 +1,115 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useGSAP } from "@gsap/react";
+import { SplitText } from "gsap/all";
+import gsap from "gsap";
 
 const Hero = () => {
+  useGSAP(() => {
+    const heroHeadingSplit = new SplitText("#hero-heading", {
+      type: "chars",
+    });
+    const heroNameSplit = new SplitText("#name", {
+      type: "chars",
+    });
+
+    heroHeadingSplit.chars.forEach((char) =>
+      char.classList.add("text-gradient")
+    );
+    heroNameSplit.chars.forEach((char) => char.classList.add("text-gradient"));
+
+    gsap.from(heroNameSplit.chars, {
+      duration: 2,
+      x: 0,
+      y: 0,
+      opacity: 0,
+      ease: "sine.out",
+      stagger: 0.05,
+    });
+
+    gsap.from(".sub-heading", {
+      x: 0,
+      y: 0,
+      opacity: 0,
+      duration: 3,
+      ease: "sine.out",
+    });
+    gsap.from(".sub-second-heading", {
+      x: 0,
+      y: 0,
+      opacity: 0,
+      duration: 2,
+      ease: "sine.out",
+    });
+
+    gsap.from(heroHeadingSplit.chars, {
+      duration: 2,
+      x: 0,
+      y: 0,
+      opacity: 0,
+      ease: "sine.out",
+      stagger: 0.05,
+    });
+  }, []);
+
   return (
     <>
       <div className="noisy w-full"></div>
-      <div className="z-60 absolute text-center w-full flex flex-col justify-center sm:mt-10 md:mt-20">
-        <p className="text-gray-300 sansation-regular md:mb-5 md:text-2xl">Hi, I'm Akshai Vinu.</p>
+      <div className="z-30 absolute text-center w-full flex flex-col justify-center sm:mt-10 md:mt-20">
+        <p
+          className="text-gray-300 mt-15 md:mt-0 sansation-regular md:mb-5 md:text-2xl"
+          id="name"
+        >
+          Hi, I'm Akshai Vinu.
+        </p>
         <h1
           id="hero-heading"
           className="text-gray-300 font-bold text-2xl sm:text-4xl md:text-6xl text-bold"
         >
           WEB DEVELOPER
         </h1>
-        <div>
-          <p className="text-gray-300 sansation-regular mt-2 md:mt-10">Building seamless digital experiences with React & Node.js</p>
-          <p className="text-gray-300 sansation-regular">Modern web solutions, crafted with code and creativity</p>
+        <div className="sub-heading">
+          <p id="p" className="text-gray-300 sansation-regular mt-2 md:mt-10">
+            Building seamless digital experiences with React & Node.js
+          </p>
+          <p id="p" className="text-gray-300 sansation-regular">
+            Modern web solutions, crafted with code and creativity
+          </p>
         </div>
-        <div className="mt-2 md:mt-10">
-          <p className="text-gray-300 sansation-regular">Passionate about solving real-world problems through elegant code and user-focused designs</p>
-          <p className="text-gray-300 sansation-regular">Currently building projects with React and Node.js while growing my skills in JavaScript and database design.</p>
+        <div className="mt-10 sm:mt-2 md:mt-10 sub-second-heading">
+          <p id="p" className="text-gray-300 sansation-regular">
+            Passionate about solving real-world problems through elegant code
+            and user-focused designs
+          </p>
+          <p id="p" className="text-gray-300 mt-2 md:mt-0 sansation-regular">
+            Currently building projects with React and Node.js while growing my
+            skills in JavaScript and database design.
+          </p>
         </div>
-        <div className="flex gap-5 mt-15 text-white justify-center sansation-regular">
-          <button className="h-10 w-40 bg-blue-500/50 rounded-xs cursor-pointer">View Projects</button>
-          <button className="h-10 w-40 bg-transparent border-2 border-gray-300 rounded-xs cursor-pointer">Resume</button>
+        <div className="flex gap-5 mt-25 text-white justify-center sansation-regular">
+          <button className="h-10 w-40 bg-gray-500/50 rounded-xs cursor-pointer">
+            View Projects
+          </button>
+          <button className="h-10 w-40 bg-transparent border-2 border-gray-300 rounded-xs cursor-pointer hover:bg-gray-300/50 duration-300 ease-in-out hover:text-black/50">
+            <a href="/resume.pdf" download="resume.pdf">
+              Resume
+            </a>
+          </button>
         </div>
-        <div className="flex gap-5 mt-15 text-white justify-center sansation-regular">
-          <button className=" cursor-pointer"><Github /></button>
-          <button className="cursor-pointer"><Linkedin /></button>
-          <button className="cursor-pointer"><Mail /></button>
+        <div className="flex gap-8 mt-15 text-white justify-center sansation-regular">
+          <button className="cursor-pointer hover:scale-120 duration-300 ease-in-out">
+            <Github />
+          </button>
+          <button className="cursor-pointer hover:scale-120 duration-300 ease-in-out">
+            <Linkedin />
+          </button>
+          <button className="cursor-pointer hover:scale-120 duration-300 ease-in-out">
+            <Mail />
+          </button>
         </div>
       </div>
+      
     </>
   );
 };

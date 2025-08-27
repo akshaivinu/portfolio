@@ -2,6 +2,28 @@
 @import "tailwindcss";
 
 
+
+
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+/Edge */
+  user-select: none;         /* Standard */
+}
+
+
+
+@media screen and (max-width: 600px) {
+  
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./assets/fonts/Agraham.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .sansation-light {
   font-family: "Sansation", sans-serif;
   font-weight: 300;
@@ -48,11 +70,57 @@
         @apply absolute inset-0  bg-[url("/heroImg.jpg")] -z-20 w-full h-full bg-cover bg-center bg-no-repeat brightness-20;
     }
 
-
-
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('./assets/fonts/Agraham.otf') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+.star {
+  width: 20px;
+  aspect-ratio: 1;
+  background: gold;
+  clip-path: polygon(
+    50% 0%,
+    79% 90%,
+    2% 35%,
+    98% 35%,
+    21% 90%
+  );
 }
+
+
+
+/* .star {
+  position: relative;
+  display: block;
+  color: gold;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 70px solid gold;
+  border-left: 50px solid transparent;
+  transform: rotate(35deg);
+}
+
+.star:before {
+  content: '';
+  position: absolute;
+  top: -45px;
+  left: -50px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 70px solid gold;
+  border-left: 50px solid transparent;
+  transform: rotate(-35deg);
+}
+
+.star:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -100px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 70px solid gold;
+  border-left: 50px solid transparent;
+  transform: rotate(-70deg);
+} */
