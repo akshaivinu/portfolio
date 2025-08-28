@@ -54,30 +54,30 @@ const Hero = () => {
   }, []);
 
   return (
-    <>
-      <div className="noisy w-full"></div>
-      <div className="z-30 absolute text-center w-full flex flex-col justify-center sm:mt-10 md:mt-20">
+    <div className="h-[90svh]">
+      <div className="noisy w-max"></div>
+      <div className="z-30 absolute text-center w-full flex flex-col justify-center sm:mt-10 md:mt-20 overflow-hidden">
         <p
-          className="text-gray-300 mt-15 md:mt-0 sansation-regular md:mb-5 md:text-2xl"
+          className="text-gray-300 mt-15 md:mt-0 sansation-regular md:mb-5 md:text-2xl "
           id="name"
         >
           Hi, I'm Akshai Vinu.
         </p>
         <h1
           id="hero-heading"
-          className="text-gray-300 font-bold text-2xl sm:text-4xl md:text-6xl text-bold"
+          className="text-gray-300 font-bold text-2xl sm:text-xl md:text-5xl lg:text-6xl text-bold xs:text-xl"
         >
           WEB DEVELOPER
         </h1>
-        <div className="sub-heading">
-          <p id="p" className="text-gray-300 sansation-regular mt-2 md:mt-10">
+        <div className="sub-heading xs:px-3">
+          <p id="p" className="text-gray-300 sansation-regular mt-2 md:mt-10 text-md">
             Building seamless digital experiences with React & Node.js
           </p>
           <p id="p" className="text-gray-300 sansation-regular">
             Modern web solutions, crafted with code and creativity
           </p>
         </div>
-        <div className="mt-10 sm:mt-2 md:mt-10 sub-second-heading">
+        <div className="mt-10 sm:mt-9 md:mt-10 sub-second-heading xs:px-3">
           <p id="p" className="text-gray-300 sansation-regular">
             Passionate about solving real-world problems through elegant code
             and user-focused designs
@@ -87,7 +87,7 @@ const Hero = () => {
             skills in JavaScript and database design.
           </p>
         </div>
-        <div className="flex gap-5 mt-25 text-white justify-center sansation-regular">
+        <div className="flex md:flex-row xs:flex-col xs:items-center gap-5 mt-10 text-white justify-center sansation-regular">
           <button className="h-10 w-40 bg-gray-500/50 rounded-xs cursor-pointer">
             View Projects
           </button>
@@ -97,7 +97,7 @@ const Hero = () => {
             </a>
           </button>
         </div>
-        <div className="flex gap-8 mt-15 text-white justify-center sansation-regular">
+        <div className="flex gap-8 md:mt-15 mt-10 text-white justify-center sansation-regular">
           <button className="cursor-pointer hover:scale-120 duration-300 ease-in-out">
             <Github />
           </button>
@@ -110,7 +110,7 @@ const Hero = () => {
         </div>
       </div>
       
-    </>
+    </div>
   );
 };
 

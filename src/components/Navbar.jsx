@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="md:w-[1280px] sm:w-[740px] w-[420px] @max-xs:w-[300px] flex 
+      className="lg:w-[1280px] md:w-[750px] smmd:w-[400px] sm:w-[350px] xs:w-[310px] flex 
     m-auto h-18 items-center text-gray-300 sansation-regular p-4
      font-semibold blur-bg shadow-md rounded"
     >
@@ -15,7 +15,7 @@ const Navbar = () => {
         <p className="text-lg font-bold">PORTFOLIO</p>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <ul className="flex gap-16 text-lg">
             <li>
               <Link to="/" className="hover:text-white">
@@ -51,12 +51,12 @@ const Navbar = () => {
         </div>
 
         {/* Theme Button */}
-        <button className="hidden md:flex">
+        <button className="hidden lg:flex">
           <Sun />
         </button>
 
         {/* Mobile Toggle */}
-        <div className="md:hidden z-60 relative">
+        <div className="lg:hidden z-60 relative">
           <button
             className="cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
@@ -72,7 +72,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed top-0 h-[240px] w-full sm:w-full z-40 flex justify-center text-center mt-7 md:hidden
+          className={`fixed top-0 h-[240px] w-full sm:w-full z-40 flex justify-center text-center mt-7 lg:hidden
             transform transition-transform ease-in-out duration-500 bg-gray-500/20 right-1 backdrop-blur-lg rounded-lg translate-y-7
             ${isOpen ? "translate-x-1   " : "translate-x-200"} `}
         >
