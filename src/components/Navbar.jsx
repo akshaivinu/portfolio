@@ -21,11 +21,6 @@ const Navbar = () => {
               <Link to="/" className="hover:text-white">
                 HOME
               </Link>
-              {/* <span className="absolute left-[35%] top-[12px] text-xs -z-15 text-black/50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">★</span>
-          <span className="absolute left-[33%] top-[12px] text-xs -z-15 text-black/50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">★</span>
-          <span className="absolute left-[34%] top-[45px] text-xs -z-15 text-black/50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">★</span>
-          <span className="absolute left-[32%] top-[40px] text-xs -z-15 text-black/50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">★</span>
-          <span className="absolute left-[33%] top-[25px] text-xs -z-15 text-black opacity-0 drop-shadow-2xl group-hover:opacity-100 transition duration-300 ease-in-out">★</span> */}
             </li>
             <li>
               <Link to="/about" className="hover:text-white">
@@ -74,7 +69,7 @@ const Navbar = () => {
         <div
           className={`fixed top-0 h-[240px] w-full sm:w-full z-40 flex justify-center text-center mt-7 lg:hidden
             transform transition-transform ease-in-out duration-500 bg-gray-500/20 right-1 backdrop-blur-lg rounded-lg translate-y-7
-            ${isOpen ? "translate-x-1   " : "translate-x-200"} `}
+            ${isOpen ? "translate-x-1" : "translate-x-300"} `}
         >
           <div>
             <ul className="flex flex-col gap-5 text-lg p-3">

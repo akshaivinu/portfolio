@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { useGSAP } from "@gsap/react";
-import { SplitText } from "gsap/all";
+import { ScrollSmoother, SplitText } from "gsap/all";
 import gsap from "gsap";
 
 const Hero = () => {
@@ -51,6 +51,8 @@ const Hero = () => {
       ease: "sine.out",
       stagger: 0.05,
     });
+
+    
   }, []);
 
   return (
@@ -70,7 +72,10 @@ const Hero = () => {
           WEB DEVELOPER
         </h1>
         <div className="sub-heading xs:px-3">
-          <p id="p" className="text-gray-300 sansation-regular mt-2 md:mt-10 text-md">
+          <p
+            id="p"
+            className="text-gray-300 sansation-regular mt-2 md:mt-10 text-md"
+          >
             Building seamless digital experiences with React & Node.js
           </p>
           <p id="p" className="text-gray-300 sansation-regular">
@@ -109,7 +114,6 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      
     </div>
   );
 };

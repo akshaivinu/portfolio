@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import gsap from "gsap";
-import {  ScrollTrigger, SplitText } from "gsap/all";
+import { ScrollSmoother, ScrollTrigger, SplitText } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, ScrollSmoother);
 const App = () => {
   return (
     <>
