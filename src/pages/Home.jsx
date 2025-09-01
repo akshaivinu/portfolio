@@ -6,6 +6,8 @@ import Projects from "../components/Projects";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Contact from "../components/Contact";
+import Form from "../components/Form";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -23,8 +25,8 @@ const Home = () => {
         <Projects />
       </div>
       <div className="skills-section bg-black text-white h-auto">
-        <h1 className="text-4xl sansation-regular pl-15 skills-heading">Skills</h1>
-        <div className="flex flex-row gap-10 pl-15 pt-5">
+        <h1 className="text-4xl sansation-regular sm:pl-15 md:pl-40 skills-heading">Skills</h1>
+        <div className="flex flex-row gap-10 sm:pl-15 pt-5 md:pl-40">
           <p className=" text-xl border border-white px-2 py-0.5 rounded-4xl active skills-subheading" data-speed="1">
             Frontend
           </p>
@@ -38,13 +40,17 @@ const Home = () => {
             Tools
           </p>
         </div>
-        <div className="pl-15 mt-20 h-auto">
+        <div className="md:pl-15 sm:pl-15 mt-20 h-auto">
           <Skills />
         </div>
       </div>
-      <div className="bg-black h-[500px] pl-15 pt-20">
+      <div className="bg-black h-auto md:pl-15 sm:pl-1 pt-20">
         <Contact />
       </div>
+      <div className="bg-black h-auto md:pl-15 sm:pl-1 pt-20">
+        <Form />
+      </div>
+      <Footer />
     </div>
   );
 };
