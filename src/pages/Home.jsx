@@ -5,6 +5,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Contact from "../components/Contact";
 
 const Home = () => {
 
@@ -37,9 +38,12 @@ const Home = () => {
             Tools
           </p>
         </div>
-        <div className="pl-15 mt-20 h-[100svh]">
+        <div className="pl-15 mt-20 h-auto">
           <Skills />
         </div>
+      </div>
+      <div className="bg-black h-[500px] pl-15 pt-20">
+        <Contact />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const Skills = () => {
     },[])
 
   return (
-    <div className='grid lg:grid-cols-4 grid-cols-1 lg:gap-4 gap-8'>
+    <div className='grid lg:grid-cols-3 grid-cols-1 sm:grid-cols-1  lg:gap-8 gap-8 lg:w-[1280px] md:w-[750px] smmd:w-[400px] sm:w-[350px] xs:w-[310px] mx-auto'>
         <div className='w-[350px] bg-white h-[70px] rounded-xl text-black px-4 skill-card'>
             <div className='flex justify-between pt-2 skill-content'>
                 <div>
