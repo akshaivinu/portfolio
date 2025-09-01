@@ -77,3 +77,9 @@ body {
 .noisy {
   @apply absolute inset-0  bg-[url("/heroImg.jpg")] -z-20 w-full h-full bg-cover bg-center bg-no-repeat brightness-20;
 }
+
+.active {
+  background: #706e6e;
+  border: none;
+  color: #fff;
+}
